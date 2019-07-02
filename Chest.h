@@ -6,7 +6,7 @@
 
 class Chest {
 public:
-    Chest() {};
+    Chest();
     ~Chest() {}
 
     bool getIsOpen() const {
@@ -17,9 +17,10 @@ public:
         this->isOpen = isOpen;
     }
 
-    void givePowerUp();
+    void givePowerUp(GameCharacter& character);
 private:
     bool isOpen {false};
+    std::unique_ptr<PowerUp> improvement;
 };
 
 

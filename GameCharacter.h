@@ -4,7 +4,7 @@
 
 class GameCharacter {
 public:
-    explicit GameCharacter() : health(100), armor(10), attack(50), posX(0), posY(0) {}
+    GameCharacter(int h, int ar, int at, int X, int Y) : health(h), armor(ar), attack(at), posX(X), posY(Y) {}
     virtual ~GameCharacter() {}
 
     int getHealth() const {
