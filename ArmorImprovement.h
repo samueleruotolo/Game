@@ -6,8 +6,8 @@
 
 class ArmorImprovement : public PowerUp{
 public:
-    ArmorImprovement();
-    ~ArmorImprovement();
+    ArmorImprovement() {};
+    ~ArmorImprovement() {};
 
     void improveStat(GameCharacter& character) override;
 };

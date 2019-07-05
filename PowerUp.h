@@ -6,8 +6,8 @@
 
 class PowerUp {
 public:
-    PowerUp();
-    virtual ~PowerUp();
+    PowerUp() {};
+    virtual ~PowerUp() {};
     virtual void improveStat(GameCharacter& character) = 0;
 };
 

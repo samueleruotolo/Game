@@ -6,8 +6,8 @@
 
 class HealthImprovement : public PowerUp {
 public:
-    HealthImprovement();
-    ~HealthImprovement();
+    HealthImprovement() {};
+    ~HealthImprovement() {};
 
     void improveStat(GameCharacter& character) override;
 };

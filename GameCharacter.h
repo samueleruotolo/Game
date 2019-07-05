@@ -12,7 +12,7 @@ public:
     }
 
     void setHealth(int health) {
-        this->health += health;
+        this->health = health;
     }
 
     int getArmor() const {
@@ -20,7 +20,7 @@ public:
     }
 
     void setArmor(int armor) {
-        this->armor += armor;
+        this->armor = armor;
     }
 
     int getAttack() const {
@@ -28,7 +28,7 @@ public:
     }
 
     void setAttack(int attack) {
-        this->attack += attack;
+        this->attack = attack;
     }
 
     int getPosX() const {
@@ -52,7 +52,7 @@ public:
         posY += y;
     }
 
-    virtual int basicAttack(GameCharacter& enemy) = 0;
+    virtual void basicAttack(GameCharacter &enemy) = 0;
 
 private:
     int health;
