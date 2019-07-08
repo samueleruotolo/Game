@@ -1,11 +1,11 @@
-#include "ctime"
+#include <ctime>
 #include "Chest.h"
 #include "ArmorImprovement.h"
 #include "AttackImprovement.h"
 #include "HealthImprovement.h"
 #include "GameCharacter.h"
 
-Chest::Chest(){
+Chest::Chest() {
     std::srand(time(nullptr));
     int choice = rand()%3+1;
 

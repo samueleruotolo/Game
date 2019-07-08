@@ -9,7 +9,7 @@ public:
     Boss (int h, int ar, int at, int X, int Y) : GameCharacter(h, ar, at, X, Y) {}
     virtual ~Boss() {}
 
-    virtual void basicAttack(GameCharacter &enemy) = 0;
+    virtual void basicAttack() = 0;
     void performBossSkill(GameCharacter& character);
 private:
 };

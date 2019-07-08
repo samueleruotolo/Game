@@ -52,7 +52,7 @@ public:
         posY += y;
     }
 
-    virtual void basicAttack(GameCharacter &enemy) = 0;
+    virtual void basicAttack() = 0;
 
 private:
     int health;

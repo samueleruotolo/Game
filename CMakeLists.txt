@@ -7,13 +7,6 @@ set(SFML_INCLUDE_DIR "SFML/include")
 set(SFML_LIBRARY_DIR "SFML/lib")
 set(SFML_DIR "SFML/lib/cmake/SFML")
 
-set(SOURCE_FILES main.cpp GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h Chest.cpp Chest.h PowerUp.cpp PowerUp.h
-        HealthImprovement.cpp HealthImprovement.h AttackImprovement.cpp AttackImprovement.h ArmorImprovement.cpp
-        ArmorImprovement.h Knight.cpp Knight.h Wizard.cpp Wizard.h Marksman.cpp Marksman.h DefaultValues.h Boss.cpp
-        Boss.h Drake.cpp Drake.h Ogre.cpp Ogre.h)
-
-add_subdirectory(unit_test)
-
 link_directories(SFML_LIBRARY_DIR)
 include_directories(SFML_INCLUDE_DIR)
 
@@ -25,7 +18,13 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
+set(SOURCE_FILES main.cpp GameCharacter.cpp GameCharacter.h Hero.cpp Hero.h Chest.cpp Chest.h PowerUp.cpp PowerUp.h
+        HealthImprovement.cpp HealthImprovement.h AttackImprovement.cpp AttackImprovement.h ArmorImprovement.cpp
+        ArmorImprovement.h Knight.cpp Knight.h Wizard.cpp Wizard.h Marksman.cpp Marksman.h DefaultValues.h Boss.cpp
+        Boss.h Drake.cpp Drake.h Ogre.cpp Ogre.h Game.cpp Game.h Projectile.cpp Projectile.h Skeleton.cpp Skeleton.h RangedSkeleton.cpp RangedSkeleton.h)
+
+add_subdirectory(unit_test)
+
 add_executable(Game ${SOURCE_FILES})
 add_library(core ${SOURCE_FILES})
-target_link_libraries (Game sfml-graphics sfml-window sfml-system)
-target_link_libraries(Game core)
+target_link_libraries(Game sfml-graphics sfml-window sfml-system)
