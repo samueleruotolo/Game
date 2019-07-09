@@ -10,8 +10,8 @@ public:
     Hero (int h, int ar, int at, int X, int Y) : GameCharacter(h, ar, at, X, Y) {}
     virtual ~Hero() {}
 
-    virtual void basicAttack() = 0;
-    virtual void performPrimarySkill() = 0;
+    virtual void basicAttack(Game &game, int keyPressed) = 0;
+    virtual void performPrimarySkill();
     virtual void performSecondarySkill() = 0;
 
     void interact(Chest& chest, GameCharacter& character);

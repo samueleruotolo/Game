@@ -4,7 +4,8 @@
 
 #include <memory>
 #include <vector>
-#include "GameCharacter.h"
+
+class GameCharacter;
 
 class Game {
 public:

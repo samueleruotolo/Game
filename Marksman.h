@@ -2,15 +2,14 @@
 #define GAME_MARKSMAN_H
 
 
-#include "Hero.h"
+#include "RangedHero.h"
+#include "Game.h"
 
-class Marksman : public Hero {
+class Marksman : public RangedHero {
 public:
-    explicit Marksman(int h=100, int ar=10, int at=45, int X=0, int Y=0) : Hero(h, ar, at, X, Y) {}
+    explicit Marksman(int h=100, int ar=10, int at=45, int X=0, int Y=0) : RangedHero(h, ar, at, X, Y) {}
     ~Marksman() {}
 
-    void basicAttack() override;
-    void performPrimarySkill() override;
     void performSecondarySkill() override;
 private:
 };
