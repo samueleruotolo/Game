@@ -2,15 +2,14 @@
 #define GAME_KNIGHT_H
 
 
-#include "Hero.h"
+#include "Game.h"
+#include "MeleeHero.h"
 
-class Knight : public Hero {
+class Knight : public MeleeHero {
 public:
-    explicit Knight(int h=150, int ar=20, int at=35, int X=0, int Y=0) : Hero(h, ar, at, X, Y) {}
+    explicit Knight(int h=150, int ar=20, int at=35, int X=0, int Y=0) : MeleeHero(h, ar, at, X, Y) {}
     ~Knight() {}
 
-    void basicAttack() override;
-    void performPrimarySkill() override;
     void performSecondarySkill() override;
 private:
 };

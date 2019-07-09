@@ -2,16 +2,15 @@
 #define GAME_WIZARD_H
 
 
-#include "Hero.h"
+#include "RangedHero.h"
+#include "Game.h"
 
-class Wizard : public Hero {
+class Wizard : public RangedHero {
 public:
-    explicit Wizard(int h=110, int ar=10, int at=40, int X=0, int Y=0) : Hero(h, ar, at, X, Y) {}
+    explicit Wizard(int h=110, int ar=10, int at=40, int X=0, int Y=0) : RangedHero(h, ar, at, X, Y) {}
     ~Wizard() {}
 
-    void basicAttack() override;
-    void performPrimarySkill() override ;
-    void performSecondarySkill() override ;
+    void performSecondarySkill() override;
 private:
 };
 

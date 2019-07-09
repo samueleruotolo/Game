@@ -2,6 +2,8 @@
 #define GAME_GAMECHARACTER_H
 
 
+class Game;
+
 class GameCharacter {
 public:
     GameCharacter(int h, int ar, int at, int X, int Y) : health(h), armor(ar), attack(at), posX(X), posY(Y) {}
@@ -52,7 +54,7 @@ public:
         posY += y;
     }
 
-    virtual void basicAttack() = 0;
+    virtual void basicAttack(Game &game, int keyPressed) = 0;
 
 private:
     int health;
