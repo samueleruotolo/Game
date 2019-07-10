@@ -10,4 +10,8 @@
     </option>
     <option name="cloneParentDir" value="C:\Users\Principale\Desktop" />
   </component>
+  <component name="Vcs.Log.App.Settings">
+    <option name="COMPACT_REFERENCES_VIEW" value="false" />
+    <option name="SHOW_CHANGES_FROM_PARENTS" value="true" />
+  </component>
 </application>
