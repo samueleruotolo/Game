@@ -7,7 +7,7 @@
 #include "RangedSkeleton.h"
 #include <SFML/Window/Keyboard.hpp>
 
-void Game::insertHero() {
+void Game::insertHero() { //TODO cambiare la scelta
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1))
         hero = std::move(std::unique_ptr<GameCharacter>(new Knight));
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))

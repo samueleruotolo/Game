@@ -10,6 +10,7 @@ public:
     virtual ~MeleeEnemy() {}
 
     void basicAttack(Game& game, int keyPressed) override;
+    void move(Game& game);
 };
 
 
